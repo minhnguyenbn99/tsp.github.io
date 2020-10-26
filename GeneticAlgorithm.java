@@ -71,17 +71,17 @@ public class GeneticAlgorithm {
 
     // Mutate a circle using swap mutation
     private static void mutate(Circle circle) {
-        for(int tourPos1=0; tourPos1 < circle.circleSize(); tourPos1++){
+        for(int circlePos1=0; circlePos1 < circle.circleSize(); circlePos1++){
             // Apply mutation rate
             if(Math.random() < mutationRate){           
-                int tourPos2 = (int) (Math.random()*circle.circleSize());
+                int circlePos2 = (int) (Math.random()*circle.circleSize());
                 // Get the cities at target position in cle
-                City city1 = circle.getCity(tourPos1);
-                City city2 = circle.getCity(tourPos2);
+                City city1 = circle.getCity(circlePos1);
+                City city2 = circle.getCity(circlePos2);
 
                 // Swap
-                circle.setCity(tourPos2, city1);
-                circle.setCity(tourPos1, city2);
+                circle.setCity(circlePos2, city1);
+                circle.setCity(circlePos1, city2);
             }
         }
     }
