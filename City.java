@@ -2,7 +2,7 @@ package laptrinhtsp2;
 
 public class City {
 	int x;
-    int y;
+    	int y;
     
     // Constructs a randomly placed city
     public City(){
