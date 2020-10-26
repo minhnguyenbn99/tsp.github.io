@@ -2,7 +2,7 @@ package laptrinhtsp2;
 
 public class GeneticAlgorithm {
     private static final double mutationRate = 0.02;
-    private static final int tournamentSize = 5;
+    private static final int circlexSize = 5;
     private static final boolean elitism = true;
 
     // Evolves a new population 
@@ -87,14 +87,14 @@ public class GeneticAlgorithm {
     }
 
     // Selects candidate circle for crossover
-    private static Circle tournamentSelection(Population pop) {
-               Population tournament = new Population(tournamentSize, false);
-               for (int i = 0; i < tournamentSize; i++) {
+    private static Circle circlexSelection(Population pop) {
+               Population circlex = new Population(circlexSize, false);
+               for (int i = 0; i < circlextSize; i++) {
             int randomId = (int) (Math.random() * pop.populationSize());
-            tournament.saveCircle(i, pop.getCircle(randomId));
+            circlex.saveCircle(i, pop.getCircle(randomId));
         }
         // Get the fittest cirle
-        Circle fittest = tournament.getFittest();
+        Circle fittest = circlex.getFittest();
         return fittest;
     }
 }
